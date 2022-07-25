@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () { return view('welcome');
+Route::get('/index', function () { return view('welcome');
 });
 
 Route::get('/users', [UserController::class, 'index']);
-Route::post('/create', [UserController::class, 'create']);
+Route::post('/users', [UserController::class, 'create']);
 Route::get('/getusers',[UserController::class, 'getusers']);
 Route::get('/delete/{id}', [UserController::class, 'delete']);
 Route::get('/view/{id}', [UserController::class, 'view']);

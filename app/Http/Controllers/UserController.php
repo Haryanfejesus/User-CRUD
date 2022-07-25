@@ -10,29 +10,23 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-
     public function index(){
      return view('users');
 }
-
     public function create(Request $request){
         $user = new User;
        $user ->Name = $request->Name;
         $user->email = $request->email;
         $user->phone = $request->phone;
         $user->save();
-
         $request->session()->put('success','User has been created successfully.');
         return redirect('users');
-
     }
-
 
     public function getusers(){
         $users = User::all();
-        return view('Getusers', ['users' => $users]);
+        return view('getusers', ['users' => $users]);
     }
-
 
     public function delete($id){
         $user = User::find($id);
@@ -55,9 +49,5 @@ class UserController extends Controller
        $request->Session()->put('success', "User details Updated");
         return redirect('/getusers');
     }
-
-
-
-
 
 }
