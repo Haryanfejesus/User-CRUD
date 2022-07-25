@@ -18,7 +18,7 @@
     <th>Email</th>
     <th>Phone</th>
     <th>Action</th>
-        </thead></tr>";
+        </thead></tr>
 @foreach($users as $user)
     <tr>
         <td>{{$user -> id}}</td>
@@ -35,4 +35,4 @@
 
           <div class="row mt-5"><a href="/users" class="btn btn-info m-auto">Create User</a></div>
 
-        "</table></table></center></body></html>";
+        </table></table></center></body></html>
